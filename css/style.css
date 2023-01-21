@@ -27,8 +27,8 @@ body {
 @font-face {
   font-family: 'OpenSans';
   src: local("OpenSans-Regular"),
-  url("/weblayout_project/project/fonts/OpenSans-Regular.woff2") format("woff2"),
-  url("/weblayout_project/project/fonts/OpenSans-Regular.woff") format("woff");
+  url("/fonts/OpenSans-Regular.woff2") format("woff2"),
+  url("/fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -37,8 +37,8 @@ body {
 @font-face {
   font-family: 'OpenSans';
   src: local("OpenSans-Bold"),
-  url("/weblayout_project/project/fonts/OpenSans-Bold.woff2") format("woff2"),
-  url("/weblayout_project/project/fonts/OpenSans-Bold.woff") format("woff");
+  url("/fonts/OpenSans-Bold.woff2") format("woff2"),
+  url("/fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -227,7 +227,7 @@ background-color: var(--link_focus);
 .header__styles_svg {
   margin-left: 5px;
   transform: rotate(180deg);
-  
+
 }
 
 .header__styles_svg--open {
@@ -420,83 +420,83 @@ background-color: var(--link_focus);
 }
 
 .styles__article[data-name="tintoretto"] {
-  background-image: url('/weblayout_project/project/img/real_tintoretto.jpg');
+  background-image: url('/img/real_tintoretto.jpg');
 }
 
 .styles__article[data-name="fridrih"] {
-  background-image: url('/weblayout_project/project/img/real_fridrih.jpg');
+  background-image: url('/img/real_fridrih.jpg');
 }
 
 .styles__article[data-name="leonardo"] {
-  background-image: url('/weblayout_project/project/img/real_leonardo.jpg');
+  background-image: url('/img/real_leonardo.jpg');
 }
 
 .styles__article[data-name="verrokko"] {
-  background-image: url('/weblayout_project/project/img/real_verrokko.jpg');
+  background-image: url('/img/real_verrokko.jpg');
 }
 
 .styles__article[data-name="mone"] {
-  background-image: url('/weblayout_project/project/img/impres_mone.jpg');
+  background-image: url('/img/impres_mone.jpg');
 }
 
 .styles__article[data-name="sislei"] {
-  background-image: url('/weblayout_project/project/img/impres_sislei.jpg');
+  background-image: url('/img/impres_sislei.jpg');
 }
 
 .styles__article[data-name="mane"] {
-  background-image: url('/weblayout_project/project/img/impres_mane.jpg');
+  background-image: url('/img/impres_mane.jpg');
 }
 
 .styles__article[data-name="renuar"] {
-  background-image: url('/weblayout_project/project/img/imptres_renuar.jpg');
+  background-image: url('/img/imptres_renuar.jpg');
 }
 
 .styles__article[data-name="vangok"] {
-  background-image: url('/weblayout_project/project/img/postimpres_vangok.jpg');
+  background-image: url('/img/postimpres_vangok.jpg');
 }
 
 .styles__article[data-name="sezann"] {
-  background-image: url('/weblayout_project/project/img/postimpres_sezann.jpg');
+  background-image: url('/img/postimpres_sezann.jpg');
 }
 
 .styles__article[data-name="gogen"] {
-  background-image: url('/weblayout_project/project/img/postimpres_gogen.jpg');
+  background-image: url('/img/postimpres_gogen.jpg');
 }
 
 .styles__article[data-name="sera"] {
-  background-image: url('/weblayout_project/project/img/postimpres_sera.jpg');
+  background-image: url('/img/postimpres_sera.jpg');
 }
 
 .styles__article[data-name="kandinskii"] {
-  background-image: url('/weblayout_project/project/img/avangard_kandinskii.jpg');
+  background-image: url('/img/avangard_kandinskii.jpg');
 }
 
 .styles__article[data-name="marinetti"] {
-  background-image: url('/weblayout_project/project/img/avangard_marinetti.jpg');
+  background-image: url('/img/avangard_marinetti.jpg');
 }
 
 .styles__article[data-name="malevich"] {
-  background-image: url('/weblayout_project/project/img/avangard_malevich.jpg');
+  background-image: url('/img/avangard_malevich.jpg');
 }
 
 .styles__article[data-name="picasso"] {
-  background-image: url('/weblayout_project/project/img/avangard_picasso.jpg');
+  background-image: url('/img/avangard_picasso.jpg');
 }
 
 .styles__article[data-name="karra"] {
-  background-image: url('/weblayout_project/project/img/futurism_karra.jpg');
+  background-image: url('/img/futurism_karra.jpg');
 }
 
 .styles__article[data-name="pratella"] {
-  background-image: url('/weblayout_project/project/img/futurism_pratella.jpg');
+  background-image: url('/img/futurism_pratella.jpg');
 }
 
 .styles__article[data-name="severini"] {
-  background-image: url('/weblayout_project/project/img/futurism_severini.jpg');
+  background-image: url('/img/futurism_severini.jpg');
 }
 
 .styles__article[data-name="balla"] {
-  background-image: url('/weblayout_project/project/img/futurism_balla.jpg');
+  background-image: url('/img/futurism_balla.jpg');
 }
 
 /*hero*/
@@ -521,17 +521,17 @@ background-color: var(--link_focus);
 }
 
 .hero-slide-one {
-  background-image: url("/weblayout_project/project/img/hero_bg1.jpg");
+  background-image: url("/img/hero_bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero-slide-two {
-  background-image: url("/weblayout_project/project/img/hero_bg2.png");
+  background-image: url("/img/hero_bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero-slide-three {
-  background-image: url("/weblayout_project/project/img/hero_bg3.jpg");
+  background-image: url("/img/hero_bg3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -598,7 +598,7 @@ background-color: var(--hero_btn_active);
 
 .gallary {
   padding: 80px 0;
-  background-image: url("/weblayout_project/project/img/gallary_bg.jpg");
+  background-image: url("/img/gallary_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
