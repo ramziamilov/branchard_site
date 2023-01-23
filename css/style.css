@@ -55,6 +55,31 @@ body {
 
 /*glob*/
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.simplebar-content-wrapper {
+  overflow: auto;
+   -ms-overflow-style: auto;
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+  display: initial;
+  width: initial;
+  height: initial;
+}
+
+
+
 .list-reset {
   margin: 0;
   padding: 0;
@@ -307,6 +332,7 @@ background-color: var(--link_focus);
   height: 300px;
   background: rgba(0, 0, 0, 0.5);
 }
+
 
 .real-style {
   display: none;
@@ -603,6 +629,7 @@ background-color: var(--hero_btn_active);
   background-size: cover;
 }
 
+
 .gallary__title {
   margin-bottom: 13px;
   color: var(--text_color_white);
@@ -617,12 +644,13 @@ background-color: var(--hero_btn_active);
 }
 
 .gallary__content_left {
-  width: 25%;
+  margin-right: 50px;
+  width: 26%;
 }
 
 .gallary__form {
-  width: 100%;
   justify-content: space-between;
+  height: 71%;
 }
 
 .gallary__select {
@@ -634,7 +662,7 @@ background-color: var(--hero_btn_active);
 }
 
 .gallary__check_text {
-  padding-left: 15px;
+  padding-left: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
@@ -645,7 +673,7 @@ background-color: var(--hero_btn_active);
   content: "";
   position: absolute;
   top: 10px;
-  left: 0;
+  left: 2px;
   width: 12px;
   height: 12px;
   outline: 1px solid var(--text_color_white);
@@ -655,7 +683,7 @@ background-color: var(--hero_btn_active);
   content: "";
   position: absolute;
   top: 14px;
-  left: 4px;
+  left: 6px;
   width: 4px;
   height: 4px;
   background-color: #C283F3;
@@ -669,18 +697,150 @@ background-color: var(--hero_btn_active);
     -webkit-appearance: none;
   }
 
-  .visually-hidden {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    padding:0 !important;
-    border:0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden;
-  }
+
 
   .gallary__checkbox:checked + .gallary__check_box::before {
     opacity: 1;
   }
+
+  .gallary__label_check:hover:not(:focus-visible) .gallary__check_box::after {
+    outline: 1px solid var(--link_hover);
+  }
+
+  .gallary__label_check:active:not(:focus-visible) .gallary__check_box::after {
+    outline: 1px solid var(--hero_btn_active);
+  }
+
+  .gallary__check_text:active:not(:focus-visible) {
+    color: var(--hero_btn_active);
+  }
+
+  .gallary__label_check:focus .gallary__check_text{
+    color: var(--hero_btn_active);
+  }
+
+  .gallary__label_check:focus .gallary__check_box::after {
+    outline: 1px solid var(--hero_btn_active);
+  }
+
+  .choices__inner {
+    background-color: transparent;
+    padding: 0 0 0 6px;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+
+  .gallary__label_select:hover .choices {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .choices:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 0;
+}
+
+  .choices__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--text_color_white);
+  }
+
+  .choices__list--dropdown {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    background-image: url("/img/gallary_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 6px 6px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.choices[data-type*=select-one]:after {
+  content: '';
+  height: 10px;
+  width: 10px;
+  border-style: solid;
+  border-color: transparent #FFFFFF #FFFFFF transparent;
+  border-width: 1px;
+  position: absolute;
+  top: 38%;
+  right: 4%;
+  pointer-events: none;
+  transform: rotate(45deg);
+}
+
+.choices[data-type*=select-one].is-open:after {
+  transform: rotate(225deg);
+  border-color: transparent #FFFFFF #FFFFFF transparent;
+  margin-top: 0;
+}
+
+.gallary__content_right {
+  position: relative;
+  height: 435px;
+  width: 75%;
+}
+
+.gallary__swiper {
+  padding-top: 85px;
+  width: 1150px;
+  height: 435px;
+  z-index: 1;
+}
+
+.swiper-button-prev {
+  top: 45px;
+  left: 1px;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+
+}
+
+.swiper-button-next {
+  top: 45px;
+  right: 0;
+  left: 100px;
+  color: transparent;
+  width: 30px;
+  height: 30px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  content: "";
+}
+
+.swiper-button-next:hover:not(:focus-visible) svg, .swiper-button-prev:hover:not(:focus-visible) svg{
+fill: #9D5CD0;
+}
+
+.swiper-button-next:active:not(:focus-visible) svg, .swiper-button-prev:active:not(:focus-visible) svg{
+  fill: #7943A4;
+  outline: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.swiper-button-next:focus-visible svg, .swiper-button-prev:focus-visible svg{
+    outline: 2px solid #000000;
+    border-radius: 50%;
+}
+
+/* стили дизейбла, не очень красивые
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+}
+
+.swiper-button-disabled svg {
+  fill: #ECECEC;
+  stroke: #CACACA;
+}
+*/
 

@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard - художественная галерея</title>
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet"  href="/libs/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="/libs/choices.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
   <link rel="shortcut icon" href="/img/Blanchard_favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/media.css">
@@ -88,8 +89,8 @@
   <div class="dropdown_list">
     <div class="container dropdown_list__container">
       <div class="painters flex-row">
-        <div class="styles real-style" data-target="realism">
-          <ul class="styles__list flex-column list-reset">
+        <div class="simplebar-content styles real-style" data-target="realism">
+          <ul class="simplebar-scroll-content styles__list flex-column list-reset">
             <li class="styles__item">
               <article class="styles__article" data-name="tintoretto">
                 <a href="" class="styles__link">Тинторетто</a>
@@ -113,7 +114,7 @@
           </ul>
         </div>
         <div class="styles impres-style" data-target="impres">
-          <ul class="styles__list flex-column list-reset">
+          <ul class="styles__list flex-column list-reset ">
             <li class="styles__item">
               <article class="styles__article"  data-name="mone">
                 <a href="" class="styles__link">Моне</a>
@@ -243,36 +244,92 @@
   </section>
   <section class="gallary">
     <div class="container gallary__container">
-      <div class="gallary__content_left">
-        <h2 class="h2_title gallary__title">Галерея</h2>
-        <p class="gallary__desc">Фильтр:</p>
-        <form class="gallary__form flex-column">
-          <label class="gallary__label_select">
-            <select name="" id="" class="gallary__select"></select>
-          </label>
-          <label class="gallary__label_check" >
-            <input type="checkbox" name="" id="" class="gallary__checkbox">
-            <span class="gallary__check_box"></span>
-            <span class="gallary__check_text">XIX век</span>
-          </label>
-          <label class="gallary__label_check">
-            <input type="checkbox" name="" id="" class="gallary__checkbox">
-            <span class="gallary__check_box"></span>
-            <span class="gallary__check_text">XX век</span>
-          </label>
-          <label class="gallary__label_check">
-            <input type="checkbox" name="" id="" class="gallary__checkbox">
-            <span class="gallary__check_box"></span>
-            <span class="gallary__check_text">Современность</span>
-          </label>
-        </form>
+      <div class="gallary__content flex-row">
+        <div class="gallary__content_left">
+          <h2 class="h2_title gallary__title">Галерея</h2>
+          <p class="gallary__desc">Фильтр:</p>
+          <form class="gallary__form flex-column">
+            <div class="galary__form_select">
+              <label class="gallary__label_select">
+                <select name="" id="" class="gallary__select">
+                  <option class="choices__item">Живопись</option>
+                  <option class="choices__item">Рисунок</option>
+                  <option class="choices__item">Скульптура</option>
+                  <option class="choices__item">Пейзаж</option>
+                </select>
+              </label>
+            </div>
+            <div class="gallary__form_checkbox flex-column">
+              <label class="gallary__label_check" >
+                <input type="checkbox" name="" id="" class="gallary__checkbox visually-hidden">
+                <span class="gallary__check_box"></span>
+                <span class="gallary__check_text">XIX век</span>
+              </label>
+              <label class="gallary__label_check">
+                <input type="checkbox" name="" id="" class="gallary__checkbox visually-hidden">
+                <span class="gallary__check_box"></span>
+                <span class="gallary__check_text">XX век</span>
+              </label>
+              <label class="gallary__label_check">
+                <input type="checkbox" name="" id="" class="gallary__checkbox visually-hidden">
+                <span class="gallary__check_box"></span>
+                <span class="gallary__check_text">Современность</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="gallary__content_right">
+          <div class="swiper gallary__swiper">
+            <div class="swiper-wrapper gallary__swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide gallary__swiper-slide">
+                <img src="/img/galary1.png" alt="Рисунок">
+              </div>
+
+              <div class="swiper-slide gallary__swiper-slide">
+                <img src="/img/galary2.png" alt="Рисунок">
+              </div>
+
+              <div class="swiper-slide gallary__swiper-slide">
+                <img src="/img/galary3.png" alt="Рисунок">
+              </div>
+
+              <div class="swiper-slide gallary__swiper-slide">
+                <img src="/img/galary4.png" alt="Рисунок">
+              </div>
+
+              <div class="swiper-slide gallary__swiper-slide">
+                <img src="/img/galary5.png" alt="Рисунок">
+              </div>
+
+              <div class="swiper-slide gallary__swiper-slide">
+                <img src="/img/galary6.png" alt="Рисунок">
+              </div>
+            </div>
+            <div class="swiper-pagination gallary__swiper-pagination"></div>
+            <div class="swiper-button-prev">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#666666"/>
+                <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" stroke="black"/>
+                <path d="M16 20L11 15L16 10" stroke="white"/>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#666666"/>
+                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="black"/>
+                <path d="M14 20L19 15L14 10" stroke="white"/>
+                </svg>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="gallary__content_right"></div>
     </div>
   </section>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="/libs/swiper-bundle.min.js"></script>
 <script  src="/libs/choices.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="/js/script.js"></script>
 </body>
 </html>
