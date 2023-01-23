@@ -55,6 +55,10 @@ body {
 
 /*glob*/
 
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background: #FFFFFF;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -331,8 +335,8 @@ background-color: var(--link_focus);
   width: 300px;
   height: 300px;
   background: rgba(0, 0, 0, 0.5);
+  overflow-y: visible;
 }
-
 
 .real-style {
   display: none;
@@ -523,6 +527,29 @@ background-color: var(--link_focus);
 
 .styles__article[data-name="balla"] {
   background-image: url('/img/futurism_balla.jpg');
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 5px;
+  top: 40px;
+  bottom: 40px;
+  background: #000000;
+}
+
+.simplebar-track {
+  right: 18px;
+}
+
+.simplebar-scrollbar::before {
+  opacity: 1;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+.simplebar-mask {
+  bottom: 20px;
 }
 
 /*hero*/
