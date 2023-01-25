@@ -62,3 +62,9 @@ const heroSwiper = new Swiper('.hero-swiper', {
  });
 
 
+ new Accordion ('.catalog__list', {
+  elementClass: 'catalog__item_top',
+  triggerClass: 'catalog__btn',
+  panelClass: 'catalog__item_bot',
+  activeClass: 'catalog__item_top--active'
+});
