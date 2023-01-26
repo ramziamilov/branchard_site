@@ -1,7 +1,12 @@
-dropdownBtn = document.querySelectorAll(".header__btn_styles");
-dropdownItem = document.querySelectorAll(".styles");
-dropdownSvg = document.querySelectorAll(".header__styles_svg");
-dropdownLink = document.querySelectorAll(".styles__link");
+let dropdownItem = document.querySelectorAll(".styles");
+let dropdownBtn = document.querySelectorAll(".header__btn_styles");
+let dropdownSvg = document.querySelectorAll(".header__styles_svg");
+let dropdownLink = document.querySelectorAll(".styles__link");
+let tabsLink = document.querySelectorAll(".link_painters");
+let tabsItem = document.querySelectorAll(".catalog__content_tabs");
+let catalogBtn = document.querySelectorAll(".catalog__btn");
+
+
 
 
 dropdownBtn.forEach(function(el) {
@@ -68,3 +73,40 @@ const heroSwiper = new Swiper('.hero-swiper', {
   panelClass: 'catalog__item_bot',
   activeClass: 'catalog__item_top--active'
 });
+
+
+catalogBtn.forEach(function(el) {
+  el.addEventListener('click', function(e) {
+
+    const path = e.currentTarget.dataset.path;
+
+    if(path==="no_info")
+      {
+        tabsItem.forEach(function(el){el.classList.remove('catalog__content_tabs--active')});
+        document.querySelector(`[data-target="no_info"]`).classList.add('catalog__content_tabs--active');
+      }
+
+    else
+      {
+        tabsItem.forEach(function(el){el.classList.remove('catalog__content_tabs--active')});
+        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content_tabs--active');
+      }
+  });
+
+});
+
+
+tabsLink.forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    const path = e.currentTarget.dataset.path;
+
+    tabsLink.forEach(function(btn){btn.classList.remove('link_painters--active')});
+    e.currentTarget.classList.add('link_painters--active');
+
+    tabsItem.forEach(function(el){el.classList.remove('catalog__content_tabs--active')});
+    document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content_tabs--active');
+
+  });
+});
+
+

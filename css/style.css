@@ -59,7 +59,9 @@ body {
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   background: #FFFFFF;
+  top: 1px;
 }
+
 
 .visually-hidden {
   position: absolute !important;
@@ -919,7 +921,9 @@ fill: #9D5CD0;
 }
 
 .catalog__img_painter {
-margin-bottom: 30px;
+  max-height: 470px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .catalog__h3 {
@@ -933,6 +937,16 @@ margin-bottom: 30px;
   line-height: 16px;
   color: #999999;
 }
+
+.catalog__content_tabs {
+  display: none;
+}
+
+.catalog__content_tabs--active {
+  display: block;
+}
+
+
 
 /*аккордион*/
 
@@ -1029,25 +1043,29 @@ transition-timing-function: ease;
 }
 
 .link_painters {
+  max-width: max-content;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: #333333;
-  max-width: max-content;
+  cursor: pointer;
 }
 
-.link_painters:hover:not(:active) {
+.link_painters:hover:not(:active), .catalog__no_info_link:hover:not(:active) {
 border-bottom: 1px solid #9D5CD0;
 }
 
-.link_painters:focus-visible {
+.link_painters:focus-visible, .catalog__no_info_link:focus-visible {
   background: var(--hero_btn_active);
 }
 
-.link_painters:active {
+.link_painters:active, .catalog__no_info_link:active {
   color: var(--hero_btn_active);
 }
 
+.link_painters--active {
+  color: var(--hero_btn_active);
+}
 
 .catalog__btn:focus-visible { outline: 0; }
 .catalog__btn:hover:not(:active),
@@ -1103,4 +1121,45 @@ border-bottom: 1px solid #9D5CD0;
 
 .catalog__btn:active .btn_arrow::before {
   left: 38%;
+}
+
+.catalog__no_info {
+  margin-bottom: 30px;
+  height: 470px;
+  background: #ECECEC;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog__no_info_desc {
+  margin-bottom: 15px;
+}
+
+.catalog__no_info_text {
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+text-align: center;
+color: #666666;}
+
+.article__no_painters_left {
+  margin-right: 38px;
+  width: 34%;
+  background: #999999;
+  outline: 2px solid #999999;
+  outline-offset: 12px;
+}
+
+.catalog__no_painters {
+  padding: 25px 15px;
+}
+
+.article__no_painters_right h3,
+.article__no_painters_right p {
+  margin-bottom: 5px;
+}
+
+.catalog__no_info_link {
+  color: var(--hero_btn_bg);
+  width: max-content;
 }
