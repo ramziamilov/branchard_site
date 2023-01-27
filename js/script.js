@@ -110,3 +110,46 @@ tabsLink.forEach(function(el) {
 });
 
 
+document.querySelectorAll('a[href^="#"').forEach(link => {
+
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let href = this.getAttribute('href').substring(1);
+      const scrollTarget = document.getElementById(href);
+      const topOffset = 0;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+
+      window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+  });
+});
+
+const newsSwiper = new Swiper('.news__swiper', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 35,
+  slidesPerGroup: 2,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'},
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'custom',
+    },
+ });
+
+ const projectsSwiper = new Swiper('.projects__swiper', {
+  direction: 'horizontal',
+  slidesPerView: 3,
+  spaceBetween: 50,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'},
+ });
