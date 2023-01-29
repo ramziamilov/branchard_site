@@ -146,9 +146,10 @@ const newsSwiper = new Swiper('.news__swiper', {
 
  const projectsSwiper = new Swiper('.projects__swiper', {
   direction: 'horizontal',
-  slidesPerView: 3,
-  spaceBetween: 50,
-
+  slidesPerView: 1,
+  spaceBetween: 150,
+  /*slidesOffsetAfter: 75,
+  slidesOffsetBefore:75,*/
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'},
