@@ -751,11 +751,11 @@ background-color: var(--hero_btn_active);
     color: var(--hero_btn_active);
   }
 
-  .gallary__checkbox:focus ~ .gallary__check_text{
+  .gallary__checkbox:focus-visible:not(:active) ~ .gallary__check_text{
     color: var(--hero_btn_active);
   }
 
- .gallary__checkbox:focus + .gallary__check_box::after {
+ .gallary__checkbox:focus-visible:not(:active) + .gallary__check_box::after {
     outline: 1px solid var(--hero_btn_active);
   }
 
@@ -822,7 +822,7 @@ background-color: var(--hero_btn_active);
 .gallary__content_right {
   position: relative;
   height: 435px;
-  width: 75%;
+  width: 72%;
 }
 
 .gallary__swiper {
@@ -830,6 +830,17 @@ background-color: var(--hero_btn_active);
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.gallary__swiper-pagination {
+  color: var(--text_color_white);
+  bottom: 87%;
+  left: 0;
+  width: 12%;
+  z-index: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 .gallary__swiper-button-prev {
@@ -1347,6 +1358,7 @@ stroke: var(--text_color_white);
   color: var(--text_color_white);
   visibility: hidden;
   z-index: 10;
+  transition: visibility 0.3s ease-in-out;
 }
 
 .projects__tultip_desc::before {
@@ -1362,6 +1374,13 @@ stroke: var(--text_color_white);
 
 .projects__tiltip:hover .projects__tultip_desc {
   visibility: visible;
+}
+.projects__tiltip:focus .projects__tultip_desc {
+  visibility: visible;
+}
+
+.projects__tiltip:hover svg, .projects__tiltip:focus svg {
+  fill: #D1A9F0;
 }
 
 .projects__link {
@@ -1396,6 +1415,7 @@ stroke: var(--text_color_white);
   width: 30px;
   height: 30px;
   margin-top: 0;
+  top: 35%;
 }
 
 .projects__swiper-button-next {
@@ -1421,9 +1441,14 @@ left: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 50px;
   width: 450px;
   height: 150px;
   border: 1px solid #CACACA;
+}
+
+.project__item:last-child {
+  margin-right: 0;
 }
 
 .project__item:focus-visible, .project__item:active {
@@ -1517,4 +1542,137 @@ left: 2px;
   transition: background-image 0.3s ease-in-out;
 }
 
+/*contacts*/
 
+.contacts {
+padding: 40px 0;
+border-top: 1px solid #CACACA;
+border-bottom: 1px solid #CACACA;
+}
+
+address {
+font-style: normal;
+}
+
+.contacts__adress {
+align-self: flex-start;
+}
+
+.contacts__h3 {
+  margin-bottom: 4px;
+}
+
+.contacts__content {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__form {
+  flex: 1;
+}
+
+.contacts__input {
+  width: 270px;
+  outline: none;
+  position: relative;
+  margin-right: 20px;
+  padding: 14px 23px;
+  border-radius: 100px;
+}
+
+.contacts__input:hover, .contacts__input:focus {
+  background: #ECECEC;
+}
+
+.contacts__btn {
+  padding: 11px 35px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--hero_btn_bg);
+  border: 2px solid var(--hero_btn_bg);
+  border-radius: 100px;
+}
+
+.contacts__btn:hover {
+  color: var(--text_color_white);
+  background: var(--hero_btn_bg);
+}
+
+.contacts__btn:focus-visible:not(:active) {
+  outline: 2px solid var(--link_hover);
+  outline-offset: 2px;
+}
+
+.contacts__btn:active {
+  color: var(--text_color_white);
+  background: var(--hero_btn_active);
+  border: 3px solid #D1A9F0;
+}
+
+.contacts__link:hover, .contacts__link:focus-visible  {
+  opacity: 0.5;
+}
+
+.contacs__link:active:not(:focus-visible) {
+  outline: 1px solid var(--hero_btn_bg);
+}
+
+.just-validate-error-label {
+  max-width: max-content;
+}
+
+.just-validate-error-field {
+  border-color: red;
+}
+
+.contacts__form_input {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+.is-label-invalid {
+  display: block;
+  position: absolute;
+  top: -40%;
+  left: 3%;
+}
+
+.form-group {
+  position: relative;
+}
+
+[class*=ground-pane] {
+  filter: grayscale(1);
+}
+
+/*footer*/
+
+.footer {
+  padding: 50px 0;
+  background: #000000;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__socila_link {
+display: inline-block;
+}
+
+.footer__socila_link:not(:last-child) {
+margin-right: 20px;
+}
+
+.footer__socila_link:hover path, .footer__socila_link:focus path{
+  fill: var(--text_color_white);
+}
+
+.footer__socila_link:active path {
+  fill: var(--hero_btn_bg);
+}

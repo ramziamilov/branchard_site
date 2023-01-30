@@ -54,7 +54,7 @@ const heroSwiper = new Swiper('.hero-swiper', {
 
     pagination: {
       el: '.swiper-pagination',
-      type: 'custom',
+      type: 'fraction',
     },
  });
 
@@ -154,3 +154,87 @@ const newsSwiper = new Swiper('.news__swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'},
  });
+
+
+ var selector = document.querySelector("input[type='tel']");
+ var im = new Inputmask("+7 (999) 999-99-99");
+ im.mask(selector);
+
+
+
+ const validation = new JustValidate('#contacts__form_input',
+
+ {
+  errorLabelCssClass: 'is-label-invalid',
+  errorLabelStyle: {
+    position: 'top',
+    color: '#D11616',
+    fontWeight: '400',
+    fontSize: '12px',
+    lineHeight: '16px',
+  },
+
+  focusInvalidField: true,
+  lockForm: true,
+  validateBeforeSubmitting: true,
+
+});
+
+validation
+  .addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Вы не ввели имя',
+    },
+
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Имя должно содержать более 2 символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Имя не может содержать более 30 символов',
+    },
+  ])
+
+  .addField('#tel', [
+    {
+      rule: 'required',
+      errorMessage: 'Вы не ввели телефон',
+    },
+    {
+      validator: (name, value) => {
+      const phone = selector.inputmask.unmaskedvalue()
+      return Number(phone) && phone.length === 10},
+
+      errorMessage: 'Недопустимый формат',
+    },
+  ]);
+
+   // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.75846806898367,37.60108849999989],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 15});
+
+            var myPlacemark = new ymaps.Placemark([55.75846806898367,37.60108849999989], {}, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: "/img/map_loc.svg",
+            iconImageSize: [20, 20]
+        });
+
+          // Размещение геообъекта на карте.
+          myMap.geoObjects.add(myPlacemark);
+
+    }
