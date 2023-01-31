@@ -1,0 +1,38 @@
+@media (max-width: 1200px) {
+
+.header__btn_search_top {
+  display: block;
+}
+
+.header__burger_btn {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  width: auto;
+  color: #fff;
+
+}
+
+.burger-line {
+  position: absolute;
+  left: 50%;
+  width: 36px;
+  height: 3px;
+  background: #fff;
+}
+
+.burger-line:first-child {
+  top: 6px;
+}
+
+.burger-line:last-child {
+  bottom: 11px;
+  width: 67%;
+}
+
+.burger-line:nth-child(2) {
+  transform: translateY(-120%);
+  width: 78%;
+}
+
+}

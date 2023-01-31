@@ -145,6 +145,11 @@ body {
 
 /*heder*/
 /*header_top*/
+
+.header__btn_burger, .header__btn_search_top {
+  display: none;
+}
+
 .header__top {
   background-color: #000000;
 }
