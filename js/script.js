@@ -238,3 +238,11 @@ validation
           myMap.geoObjects.add(myPlacemark);
 
     }
+
+
+const gallaryModalWindow = new HystModal({
+      linkAttributeName: "data-hystmodal",
+      closeOnOverlay: false,
+      catchFocus: true,
+  });
+

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/libs/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
   <link rel="stylesheet" href="/libs/accordion.min.css">
+  <link rel="stylesheet" href="/libs/hystmodal.min.css">
   <link rel="shortcut icon" href="/img/Blanchard_favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/media.css">
@@ -302,10 +303,10 @@
         <div class="gallary__content_right">
           <div class="swiper gallary__swiper">
             <div class="swiper-wrapper gallary__swiper-wrapper">
-              <!-- Slides -->
+
               <div class="swiper-slide gallary__swiper-slide">
                 <img class="gallary__img" src="/img/galary1.png" alt="Рисунок">
-                <button class="gallary__btn_zoom btn-reset" tabindex="-1">
+                <button class="gallary__btn_zoom btn-reset" tabindex="-1" data-hystmodal="#gallaryModalFirst">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1357 57.1965)" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
@@ -317,7 +318,7 @@
 
               <div class="swiper-slide gallary__swiper-slide">
                 <img class="gallary__img" src="/img/galary2.png" alt="Рисунок">
-                  <button class="gallary__btn_zoom btn-reset" tabindex="-1">
+                  <button class="gallary__btn_zoom btn-reset" tabindex="-1"  data-hystmodal="#gallaryModalSecond">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1357 57.1965)" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
@@ -329,7 +330,7 @@
 
               <div class="swiper-slide gallary__swiper-slide">
                 <img class="gallary__img" src="/img/galary3.png" alt="Рисунок">
-                  <button class="gallary__btn_zoom btn-reset" tabindex="-1">
+                  <button class="gallary__btn_zoom btn-reset" tabindex="-1" data-hystmodal="#gallaryModalThird">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1357 57.1965)" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
@@ -341,7 +342,7 @@
 
               <div class="swiper-slide gallary__swiper-slide">
                 <img class="gallary__img" src="/img/galary4.png" alt="Рисунок">
-                  <button class="gallary__btn_zoom btn-reset" tabindex="-1">
+                  <button class="gallary__btn_zoom btn-reset" tabindex="-1" data-hystmodal="#gallaryModalFourth">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1357 57.1965)" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
@@ -353,7 +354,7 @@
 
               <div class="swiper-slide gallary__swiper-slide">
                 <img class="gallary__img" src="/img/galary5.png" alt="Рисунок">
-                  <button class="gallary__btn_zoom btn-reset" tabindex="-1">
+                  <button class="gallary__btn_zoom btn-reset" tabindex="-1" data-hystmodal="#gallaryModalFifth">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1357 57.1965)" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
@@ -365,7 +366,7 @@
 
               <div class="swiper-slide gallary__swiper-slide">
                 <img class="gallary__img" src="/img/galary6.png" alt="Рисунок">
-                  <button class="gallary__btn_zoom btn-reset" tabindex="-1">
+                  <button class="gallary__btn_zoom btn-reset" tabindex="-1" data-hystmodal="#gallaryModalSixth">
                   <svg width="81" height="79" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1357 57.1965)" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/>
@@ -390,6 +391,164 @@
                 <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="black"/>
                 <path d="M14 20L19 15L14 10" stroke="white"/>
                 </svg>
+            </div>
+          </div>
+        </div>
+        <div class="gallary__modal_window">
+          <div class="hystmodal" id="gallaryModalFirst" aria-hidden="true">
+            <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <div class="hystmodal__styled flex-row">
+                      <article class = "hystmodal__left">
+                        <img class="hystmodal__img" src="/img/galary1.png" alt="Рисунок">
+                      </article>
+                      <article class="gystalmodal__right flex-column">
+                        <h3 class="h3_title gallary__hystmodal_h3">
+                          Имя художника
+                        </h3>
+                        <h4 class="h4_title gallary__hystmodal_h4">
+                          Название картины
+                        </h4>
+                        <p class="gallary__hystmodal_year">
+                          Год написания картины
+                        </p>
+                        <p class="gallary__hystmodal_desc text">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore laboriosam harum quam officia fugit sint nostrum facilis repudiandae quidem perspiciatis ut beatae animi, unde eaque architecto quas. Voluptatem, molestias!
+                        </p>
+                      </article>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="hystmodal" id="gallaryModalSecond" aria-hidden="true">
+                  <div class="hystmodal__wrap">
+                      <div class="hystmodal__window" role="dialog" aria-modal="true">
+                          <button data-hystclose class="hystmodal__close">Закрыть</button>
+                          <div class="hystmodal__styled flex-row">
+                            <article class = "hystmodal__left">
+                              <img class="hystmodal__img" src="/img/galary2.png" alt="Рисунок">
+                            </article>
+                            <article class="gystalmodal__right flex-column">
+                              <h3 class="h3_title gallary__hystmodal_h3">
+                                Имя художника
+                              </h3>
+                              <h4 class="h4_title gallary__hystmodal_h4">
+                                Название картины
+                              </h4>
+                              <p class="gallary__hystmodal_year">
+                                Год написания картины
+                              </p>
+                              <p class="gallary__hystmodal_desc text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore laboriosam harum quam officia fugit sint nostrum facilis repudiandae quidem perspiciatis ut beatae animi, unde eaque architecto quas. Voluptatem, molestias!
+                              </p>
+                            </article>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+          <div class="hystmodal" id="gallaryModalThird" aria-hidden="true">
+                <div class="hystmodal__wrap">
+                    <div class="hystmodal__window" role="dialog" aria-modal="true">
+                        <button data-hystclose class="hystmodal__close">Закрыть</button>
+                        <div class="hystmodal__styled flex-row">
+                          <article class = "hystmodal__left">
+                            <img class="hystmodal__img" src="/img/galary3.png" alt="Рисунок">
+                          </article>
+                          <article class="gystalmodal__right flex-column">
+                            <h3 class="h3_title gallary__hystmodal_h3">
+                              Имя художника
+                            </h3>
+                            <h4 class="h4_title gallary__hystmodal_h4">
+                              Название картины
+                            </h4>
+                            <p class="gallary__hystmodal_year">
+                              Год написания картины
+                            </p>
+                            <p class="gallary__hystmodal_desc text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore laboriosam harum quam officia fugit sint nostrum facilis repudiandae quidem perspiciatis ut beatae animi, unde eaque architecto quas. Voluptatem, molestias!
+                            </p>
+                          </article>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="hystmodal" id="gallaryModalFourth" aria-hidden="true">
+            <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <div class="hystmodal__styled flex-row">
+                      <article class = "hystmodal__left">
+                        <img class="hystmodal__img" src="/img/galary4.png" alt="Рисунок">
+                      </article>
+                      <article class="gystalmodal__right flex-column">
+                        <h3 class="h3_title gallary__hystmodal_h3">
+                          Имя художника
+                        </h3>
+                        <h4 class="h4_title gallary__hystmodal_h4">
+                          Название картины
+                        </h4>
+                        <p class="gallary__hystmodal_year">
+                          Год написания картины
+                        </p>
+                        <p class="gallary__hystmodal_desc text">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore laboriosam harum quam officia fugit sint nostrum facilis repudiandae quidem perspiciatis ut beatae animi, unde eaque architecto quas. Voluptatem, molestias!
+                        </p>
+                      </article>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="hystmodal" id="gallaryModalFifth" aria-hidden="true">
+            <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <div class="hystmodal__styled flex-row">
+                      <article class = "hystmodal__left">
+                        <img class="hystmodal__img" src="/img/galary5.png" alt="Рисунок">
+                      </article>
+                      <article class="gystalmodal__right flex-column">
+                        <h3 class="h3_title gallary__hystmodal_h3">
+                          Имя художника
+                        </h3>
+                        <h4 class="h4_title gallary__hystmodal_h4">
+                          Название картины
+                        </h4>
+                        <p class="gallary__hystmodal_year">
+                          Год написания картины
+                        </p>
+                        <p class="gallary__hystmodal_desc text">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore laboriosam harum quam officia fugit sint nostrum facilis repudiandae quidem perspiciatis ut beatae animi, unde eaque architecto quas. Voluptatem, molestias!
+                        </p>
+                      </article>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="hystmodal" id="gallaryModalSixth" aria-hidden="true">
+            <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <div class="hystmodal__styled flex-row">
+                      <article class = "hystmodal__left">
+                        <img class="hystmodal__img" src="/img/galary6.png" alt="Рисунок">
+                      </article>
+                      <article class="gystalmodal__right flex-column">
+                        <h3 class="h3_title gallary__hystmodal_h3">
+                          Имя художника
+                        </h3>
+                        <h4 class="h4_title gallary__hystmodal_h4">
+                          Название картины
+                        </h4>
+                        <p class="gallary__hystmodal_year">
+                          Год написания картины
+                        </p>
+                        <p class="gallary__hystmodal_desc text">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore laboriosam harum quam officia fugit sint nostrum facilis repudiandae quidem perspiciatis ut beatae animi, unde eaque architecto quas. Voluptatem, molestias!
+                        </p>
+                      </article>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
@@ -819,6 +978,7 @@
 <script src="/libs/inputmask.min.js"></script>
 <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+<script src="/libs/hystmodal.min.js"></script>
 <script src="/js/script.js"></script>
 </body>
 </html>
