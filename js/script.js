@@ -5,8 +5,38 @@ let dropdownLink = document.querySelectorAll(".styles__link");
 let tabsLink = document.querySelectorAll(".link_painters");
 let tabsItem = document.querySelectorAll(".catalog__content_tabs");
 let catalogBtn = document.querySelectorAll(".catalog__btn");
+let burger = document.querySelector(".header__btn_burger");
+let menu = document.querySelector(".header__nav");
+let menuLink = document.querySelectorAll(".nav__link");
+let searchBtn = document.querySelector(".header__btn_search_top");
+let closeBtn = document.querySelector(".header__btn_search_close");
 
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger--active');
+  menu.classList.toggle('header__nav--active');
+  document.body.classList.toggle('stop-scroll');
+});
 
+menuLink.forEach(function(el) {
+  el.addEventListener('click', () => {
+    burger.classList.remove('burger--active');
+    menu.classList.remove('header__nav--active');
+    document.body.classList.remove('stop-scroll');
+  });
+});
+
+searchBtn.addEventListener('click', () => {
+  searchBtn.classList.add("header__btn_search_top--disable");
+  closeBtn.classList.add("header__btn_search_close--active");
+  document.querySelector(".header__form-top").classList.add("header__form-top--active")
+});
+
+closeBtn.addEventListener("click", () => {
+  searchBtn.classList.remove("header__btn_search_top--disable");
+  closeBtn.classList.remove("header__btn_search_close--active");
+  document.querySelector(".header__form-top").classList.remove("header__form-top--active");
+  document.querySelector(".search").value = "";
+});
 
 
 dropdownBtn.forEach(function(el) {
@@ -47,6 +77,36 @@ const heroSwiper = new Swiper('.hero-swiper', {
   slidesPerView: 3,
   spaceBetween: 37,
   slidesPerGroup: 3,
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+
+    // when window width is >= 992px
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },
+
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 37,
+      slidesPerGroup: 3,
+    }
+  },
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -132,7 +192,36 @@ const newsSwiper = new Swiper('.news__swiper', {
   direction: 'horizontal',
   slidesPerView: 3,
   spaceBetween: 35,
-  slidesPerGroup: 2,
+  slidesPerGroup: 3,
+
+  breakpoints: {
+   // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 27,
+    },
+
+    // when window width is >= 320px
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 27,
+    },
+
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 35,
+    },
+  },
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -140,16 +229,48 @@ const newsSwiper = new Swiper('.news__swiper', {
 
     pagination: {
       el: '.swiper-pagination',
-      type: 'custom',
+      type: 'bullets',
+      clickable: true,
     },
  });
 
+
+
  const projectsSwiper = new Swiper('.projects__swiper', {
   direction: 'horizontal',
-  slidesPerView: 1,
-  spaceBetween: 150,
-  /*slidesOffsetAfter: 75,
-  slidesOffsetBefore:75,*/
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  spaceBetween: 50,
+
+  breakpoints: {
+    // when window width is >= 320px
+     320: {
+       slidesPerView: 1,
+       spaceBetween: 50
+     },
+     // when window width is >= 480px
+     480: {
+       slidesPerView: 1,
+       spaceBetween: 50
+     },
+     // when window width is >= 640px
+     640: {
+       slidesPerView: 2,
+       spaceBetween: 50,
+     },
+
+     // when window width is >= 320px
+     992: {
+       slidesPerView: 2,
+       spaceBetween: 50,
+     },
+
+     1200: {
+       slidesPerView: 3,
+       spaceBetween: 50,
+     },
+    },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'},

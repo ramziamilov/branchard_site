@@ -12,25 +12,25 @@
   <link rel="stylesheet" href="/libs/accordion.min.css">
   <link rel="stylesheet" href="/libs/hystmodal.min.css">
   <link rel="shortcut icon" href="/img/Blanchard_favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/css/media.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/media.css">
 </head>
 <body>
 <header class="header">
   <div class="header__top">
-    <div class="container header__container_top">
-        <nav class="header__nav flex-row">
-          <button class="header__btn_burger btn-reset">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-          </button>
-          <div class="header__logo">
-            <a href="#" class="logo__link" tabindex="-1">
-              <img src="/img/logo.svg" alt="logo">
-              <p class="logo__desc">художественная галерея</p>
-            </a>
-          </div>
+    <div class="container header__container_top flex-row">
+      <button class="header__btn_burger btn-reset">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+        <div class="header__logo">
+          <a href="#" class="logo__link" tabindex="-1">
+            <img src="/img/logo.svg" alt="logo">
+            <p class="logo__desc">художественная галерея</p>
+          </a>
+        </div>
+      <nav class="header__nav flex-row">
           <ul class="nav__list list-reset flex-row">
             <li class="nav__item"><a href="#about" class="nav__link" tabindex="0">О&nbsp;нас</a></li>
             <li class="nav__item"><a href="#gallary" class="nav__link">Галерея</a></li>
@@ -39,12 +39,6 @@
             <li class="nav__item"><a href="#projects" class="nav__link">Проекты</a></li>
             <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
           </ul>
-          <button class="header__btn_search_top btn-reset">
-            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
-              </svg>
-          </button>
           <button class="header__btn_login btn-reset" aria-label="войти в личный кабинет">
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
@@ -52,6 +46,29 @@
             Войти
           </button>
         </nav>
+        <button class="header__btn_search_top btn-reset">
+          <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+            </svg>
+        </button>
+        <form class="header__form-top flex-row">
+          <button type="submit" class="btn-reset header__btn_search" aria-label="Поиск по сайту">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z" fill="white"/>
+            </svg>
+          </button>
+          <label class="label">
+            <input type="search" class="search" placeholder="Поиск по сайту">
+          </label>
+        </form>
+        <button class="header__btn_search_close btn-reset">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09375 0)" fill="white"/>
+            <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9074)" fill="white"/>
+            </svg>
+        </button>
       </div>
   </div>
   <div class="header__bot">
@@ -86,7 +103,7 @@
             </button>
           </ul>
           <form class="header__form flex-row">
-            <button class="btn-reset header__btn_search" aria-label="Поиск по сайту">
+            <button type="submit" class="btn-reset header__btn_search" aria-label="Поиск по сайту">
               <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z" fill="white"/>
@@ -829,7 +846,8 @@
               <a href="#" class="news__link">Подробнее</a>
             </article>
         </div>
-    </div>
+      </div>
+      <div class="swiper-pagination news__swiper-pagination"></div>
     </div>
   </section>
 <section class="projects" id="projects">
@@ -848,7 +866,7 @@
       <path d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z" stroke="#9D5CD0"/>
       <path d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z" fill="black"/>
       </svg> <span class="projects__tultip_desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores cum nulla, debitis recusandae soluta esse rerum fugit quo consectetur dolor dolorem. Cumque dolores necessitatibus fugit aperiam vitae reprehenderit rerum illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam optio nulla ipsum dolores expedita maxime corporis cupiditate natus commodi, sequi ipsa quo, quidem error amet saepe! Rerum tempore soluta optio!</span>
-      </span> призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости. Подробнее: <a href="#" class="projects__link">blanchard-art.ru/projects</a>
+      </span> призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости. <br> Подробнее: <a href="#" class="projects__link">blanchard-art.ru/projects</a>
     </p>
     <h3 class="h3_title projects__h3">Партнёры проектов:</h3>
 
@@ -865,29 +883,17 @@
           <path d="M14 20L19 15L14 10" stroke="black"/>
           </svg>
       </div>
-      <div class="swiper-wrapper projects__swiper-wrapper">
-        <div class="swiper-slide projects__slide">
-          <ul class="flex-row list-reset project__list">
-            <li class="project__item" data-name="slide1_1"></li>
-            <li class="project__item" data-name="slide1_2"></li>
-            <li class="project__item" data-name="slide1_3"></li>
-          </ul>
-        </div>
-        <div class="swiper-slide projects__slide">
-          <ul class="flex-row list-reset project__list">
-            <li class="project__item" data-name="slide2_1"></li>
-            <li class="project__item" data-name="slide2_2"></li>
-            <li class="project__item" data-name="slide2_3"></li>
-          </ul>
-        </div>
-        <div class="swiper-slide projects__slide">
-          <ul class="flex-row list-reset project__list">
-            <li class="project__item" data-name="slide3_1"></li>
-            <li class="project__item" data-name="slide3_2"></li>
-            <li class="project__item" data-name="slide3_3"></li>
-          </ul>
-        </div>
-      </div>
+      <ul class="project__list list-reset swiper-wrapper projects__swiper-wrapper">
+        <li class="project__item swiper-slide projects__slide" data-name="slide1_1"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide1_2"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide1_3"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide2_1"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide2_2"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide2_3"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide3_1"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide3_2"></li>
+        <li class="project__item swiper-slide projects__slide" data-name="slide3_3"></li>
+      </ul>
      </div>
   </div>
 </section>
