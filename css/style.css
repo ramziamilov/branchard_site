@@ -303,7 +303,7 @@ background-color: var(--link_focus);
 .search {
   position: relative;
   -webkit-appearance: none;
-	width: 218px;
+	min-width: 218px;
 	height: 30px;
 	border:none;
 	background: transparent;
@@ -824,6 +824,7 @@ background-color: var(--hero_btn_active);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0 0 6px 6px;
+    z-index: 2;
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
@@ -951,9 +952,9 @@ fill: #9D5CD0;
   height: 100%;
   }
 
-.gystalmodal__right {
+.hytstmodal__right {
   padding: 121px 50px 121px 48px;
-  width: 600px;
+  min-width: 600px;
 }
 
 .gallary__hystmodal_h3 {
@@ -1421,8 +1422,9 @@ stroke: var(--text_color_white);
   padding: 40px 0;
 }
 
-.projects__tiltip {
+.projects__tultip {
   position: relative;
+  cursor: pointer;
 }
 
 .projects__title {
@@ -1437,9 +1439,10 @@ stroke: var(--text_color_white);
 .projects__tultip_desc {
   display: block;
   position: absolute;
-  top: -20px;
-  left: 35px;
+  bottom: 30px;
+  left: -100px;
   width: 300px;
+  max-height: 270px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -1453,24 +1456,35 @@ stroke: var(--text_color_white);
 .projects__tultip_desc::before {
   content: "";
   position: absolute;
-  top: 4%;
-  right: 100%;
+  bottom: -11.5%;
+  right: 59%;
   width: 0;
   height: 0;
   border: 15px solid transparent;
-  border-right-color:rgba(0, 0, 0, 0.5);
+  border-right-color: rgba(0, 0, 0, 0.5);
+  transform: rotate(270deg);
 }
 
-.projects__tiltip:hover .projects__tultip_desc {
+.projects__tultip_desc .simplebar-mask {
+  bottom: 5px};
+
+  /*.projects__tultip_desc> .simplebar-track {
+    width: 5px;
+    top: 15px;
+    bottom: 15px;
+  }*/
+
+.projects__tultip:hover .projects__tultip_desc {
+  visibility: visible;
+  opacity: 1;
+
+}
+.projects__tultip:focus .projects__tultip_desc {
   visibility: visible;
   opacity: 1;
 }
-.projects__tiltip:focus .projects__tultip_desc {
-  visibility: visible;
-  opacity: 1;
-}
 
-.projects__tiltip:hover svg, .projects__tiltip:focus svg {
+.projects__tultip:hover svg, .projects__tultip:focus svg {
   fill: #D1A9F0;
 }
 

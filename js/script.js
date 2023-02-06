@@ -81,13 +81,9 @@ const heroSwiper = new Swiper('.hero-swiper', {
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30
+      slidesPerView: 1,
+      spaceBetween: 37,
+      slidesPerGroup: 1,
     },
     // when window width is >= 640px
     640: {
@@ -197,29 +193,35 @@ const newsSwiper = new Swiper('.news__swiper', {
   breakpoints: {
    // when window width is >= 320px
     320: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 27,
+      slidesPerView: 1,
+      spaceBetween: 55,
+      slidesPerGroup: 1,
     },
 
-    // when window width is >= 320px
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 55,
+      slidesPerGroup: 2,
+    },
+
+    // when window width is >= 992px
     992: {
       slidesPerView: 3,
-      spaceBetween: 27,
+      spaceBetween: 43,
+      slidesPerGroup: 3,
+    },
+
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 55,
+      slidesPerGroup: 3,
     },
 
     1200: {
       slidesPerView: 3,
       spaceBetween: 35,
+      slidesPerGroup:3,
     },
   },
 
@@ -246,12 +248,8 @@ const newsSwiper = new Swiper('.news__swiper', {
     // when window width is >= 320px
      320: {
        slidesPerView: 1,
-       spaceBetween: 50
-     },
-     // when window width is >= 480px
-     480: {
-       slidesPerView: 1,
-       spaceBetween: 50
+       spaceBetween: 50,
+       slidesPerGroup: 1,
      },
      // when window width is >= 640px
      640: {
@@ -259,7 +257,7 @@ const newsSwiper = new Swiper('.news__swiper', {
        spaceBetween: 50,
      },
 
-     // when window width is >= 320px
+     // when window width is >= 992px
      992: {
        slidesPerView: 2,
        spaceBetween: 50,
