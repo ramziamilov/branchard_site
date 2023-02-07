@@ -85,8 +85,9 @@ const heroSwiper = new Swiper('.hero-swiper', {
       spaceBetween: 37,
       slidesPerGroup: 1,
     },
-    // when window width is >= 640px
-    640: {
+
+    // when window width is >= 768
+    767: {
       slidesPerView: 2,
       spaceBetween: 34,
     },
@@ -184,6 +185,24 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
   });
 });
 
+document.querySelectorAll('a[data-path]').forEach(link => {
+
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      let path = this.getAttribute('data-path').substring(0);
+      const scrollTarget = document.querySelector(`[data-target="${path}"`);
+      const topOffset = 0;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+
+      window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+  });
+});
+
 const newsSwiper = new Swiper('.news__swiper', {
   direction: 'horizontal',
   slidesPerView: 3,
@@ -196,10 +215,17 @@ const newsSwiper = new Swiper('.news__swiper', {
       slidesPerView: 1,
       spaceBetween: 55,
       slidesPerGroup: 1,
+
+    },
+
+    575: {
+      slidesPerView: 1,
+      spaceBetween: 60,
+      slidesPerGroup: 1,
     },
 
     // when window width is >= 640px
-    640: {
+    768: {
       slidesPerView: 2,
       spaceBetween: 55,
       slidesPerGroup: 2,
@@ -251,8 +277,9 @@ const newsSwiper = new Swiper('.news__swiper', {
        spaceBetween: 50,
        slidesPerGroup: 1,
      },
+
      // when window width is >= 640px
-     640: {
+     768: {
        slidesPerView: 2,
        spaceBetween: 50,
      },
