@@ -43,7 +43,8 @@ dropdownBtn.forEach(function(el) {
   el.addEventListener('click', function(e) {
     const path = e.currentTarget.dataset.path;
 
-      if(document.querySelector(`[data-target="${path}"]`).classList.contains('style--open')) {
+      if(document.querySelector(`[data-target="${path}"]`).classList.contains('style--open'))
+      {
         document.querySelector(`[data-target="${path}"]`).classList.remove('style--open');
         document.querySelector(`[data-targetsvg="${path}"]`).classList.remove('header__styles_svg--open');
       }
@@ -61,8 +62,10 @@ dropdownLink.forEach(function(el) {
   el.addEventListener('click', () => {
     dropdownItem.forEach(function(el) {el.classList.remove('style--open')});
     dropdownSvg.forEach(function(el) {el.classList.remove('header__styles_svg--open')});
-  })
+  });
 });
+
+
 
 const heroSwiper = new Swiper('.hero-swiper', {
   direction: 'horizontal',
