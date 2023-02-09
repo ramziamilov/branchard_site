@@ -549,83 +549,84 @@ opacity: 1;
 }
 
 .styles__article[data-name="tintoretto"] {
-  background-image: url('img/real_tintoretto.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/real_tintoretto.jpg');
 }
 
 .styles__article[data-name="fridrih"] {
-  background-image: url('img/real_fridrih.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/real_fridrih.jpg');
 }
 
 .styles__article[data-name="leonardo"] {
-  background-image: url('img/real_leonardo.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/real_leonardo.jpg');
 }
 
 .styles__article[data-name="verrokko"] {
-  background-image: url('img/real_verrokko.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/real_verrokko.jpg');
 }
 
 .styles__article[data-name="mone"] {
-  background-image: url('img/impres_mone.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/impres_mone.jpg');
 }
 
 .styles__article[data-name="sislei"] {
-  background-image: url('img/impres_sislei.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/impres_sislei.jpg');
 }
 
 .styles__article[data-name="mane"] {
-  background-image: url('img/impres_mane.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/impres_mane.jpg');
 }
 
 .styles__article[data-name="renuar"] {
-  background-image: url('img/imptres_renuar.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/imptres_renuar.jpg');
 }
 
 .styles__article[data-name="vangok"] {
-  background-image: url('img/postimpres_vangok.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/postimpres_vangok.jpg');
 }
 
 .styles__article[data-name="sezann"] {
-  background-image: url('img/postimpres_sezann.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/postimpres_sezann.jpg');
 }
 
 .styles__article[data-name="gogen"] {
-  background-image: url('img/postimpres_gogen.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/postimpres_gogen.jpg');
 }
 
 .styles__article[data-name="sera"] {
-  background-image: url('img/postimpres_sera.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/postimpres_sera.jpg');
 }
 
 .styles__article[data-name="kandinskii"] {
-  background-image: url('img/avangard_kandinskii.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/avangard_kandinskii.jpg');
 }
 
 .styles__article[data-name="marinetti"] {
-  background-image: url('img/avangard_marinetti.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/avangard_marinetti.jpg');
 }
 
+
 .styles__article[data-name="malevich"] {
-  background-image: url('img/avangard_malevich.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/avangard_malevich.jpg');
 }
 
 .styles__article[data-name="picasso"] {
-  background-image: url('img/avangard_picasso.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/avangard_picasso.jpg');
 }
 
 .styles__article[data-name="karra"] {
-  background-image: url('img/futurism_karra.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/futurism_karra.jpg');
 }
 
 .styles__article[data-name="pratella"] {
-  background-image: url('img/futurism_pratella.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/futurism_pratella.jpg');
 }
 
 .styles__article[data-name="severini"] {
-  background-image: url('img/futurism_severini.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/futurism_severini.jpg');
 }
 
 .styles__article[data-name="balla"] {
-  background-image: url('img/futurism_balla.jpg');
+  background-image: url('https://ramziamilov.github.io/branchard_site/img/futurism_balla.jpg');
 }
 
 .simplebar-track.simplebar-vertical {
