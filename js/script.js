@@ -124,6 +124,8 @@ const heroSwiper = new Swiper('.hero-swiper', {
   position: 'bottom',
   searchEnabled: false,
   itemSelectText: "",
+  renderSelectedChoices: "auto",
+
  });
 
 
@@ -249,7 +251,7 @@ const newsSwiper = new Swiper('.news__swiper', {
 
     1200: {
       slidesPerView: 3,
-      spaceBetween: 35,
+      spaceBetween: 55,
       slidesPerGroup:3,
     },
   },
@@ -294,9 +296,15 @@ const newsSwiper = new Swiper('.news__swiper', {
      },
 
      1200: {
-       slidesPerView: 3,
-       spaceBetween: 50,
-     },
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+
+    1360: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+
     },
 
   navigation: {
@@ -395,3 +403,18 @@ const gallaryModalWindow = new HystModal({
       catchFocus: true,
   });
 
+  tippy('#tultipone', {
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repudiandae doloremque architecto eligendi ipsam totam. Deserunt, sed? Ex veniam veritatis corrupti nemo facere illum laboriosam beatae odio, itaque, perferendis vitae?',
+    duration: 500,
+    theme: 'custom',
+  });
+  tippy('#tultiptwo', {
+    content: 'My tooltip!',
+    duration: 500,
+    theme: 'custom',
+  });
+  tippy('#tultipthree', {
+    content: 'My tooltip!',
+    duration: 500,
+    theme: 'custom',
+  });
