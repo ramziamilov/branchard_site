@@ -1117,7 +1117,6 @@ margin-bottom: 35px;
 
 }
 
-
 @media (min-width:320px) and (max-width: 575px) {
 
   .container {
@@ -1650,8 +1649,14 @@ margin-bottom: 35px;
 
  }
 
- @media (min-width: 340px) {
+ @media (min-width: 340px) and (max-width: 440px) {
   .header__btn_search_close--active {
     right: -16%;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 575px) {
+  .header__btn_search_close--active {
+    right: -20%;
   }
 }
