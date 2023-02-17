@@ -106,7 +106,7 @@ display: none;
   min-width: 250px;
   height: 100vh;
   z-index: 10;
-  padding: 73px 0 50px 50px;
+  padding: 73px 0 50px 90px;
   background: #000;
   overflow-y: auto;
   visibility: hidden;

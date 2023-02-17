@@ -523,20 +523,31 @@ opacity: 1;
   left: 0;
   bottom: 0;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.styles__link:hover:not(:active):after,
-.styles__link:focus-visible::after {
-  outline: 2px solid var(--link_hover);
-  opacity: 1;
-}
-
-.styles__link:active::after {
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+  transition: opacity 0.3s ease-in;
+}
+
+.styles__link::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  outline: 2px solid var(--link_hover);
+  transition: opacity 0.3s ease-in;
+}
+
+.styles__link:hover::before, .styles__link:focus-visible::before  {
   opacity: 1;
 }
 
+.styles__link:active:after {
+  opacity: 1;
+}
 
 .styles__article {
   position: relative;
@@ -929,6 +940,10 @@ background-color: var(--hero_btn_active);
   margin-top: 0;
 }
 
+.is-selected {
+  display: none;
+}
+
 .gallary__content_right {
   position: relative;
   height: 435px;
@@ -971,17 +986,19 @@ background-color: var(--hero_btn_active);
   height: 30px;
 }
 
-.gallary svg {
+.gallary svg, .gallary path {
   transition: fill 0.3s ease-in-out, outline 0.3s ease-in-out;
+}
+
+.gallary__swiper-button-next path, .gallary__swiper-button-prev path {
+  transition: fill 0.3s ease-in-out;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
   content: "";
 }
 
-
-
-.gallary__swiper-button-next:hover:not(:focus-visible) svg, .gallary__swiper-button-prev:hover:not(:focus-visible) svg {
+.gallary__swiper-button-next:hover:not(:active) path, .gallary__swiper-button-prev:hover:not(:active) path {
   fill: #9D5CD0;
 }
 
@@ -997,7 +1014,8 @@ background-color: var(--hero_btn_active);
 }
 
 
-.swiper-button-disabled path {
+.swiper-button-disabled svg {
+  transition: none !important;
   fill: #ECECEC;
   stroke: #CACACA;
 }
@@ -1027,6 +1045,7 @@ background-color: var(--hero_btn_active);
   right: -25px;
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
   opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .gallary__btn_zoom:hover:not(:focus-visible) {
@@ -1542,13 +1561,13 @@ margin-bottom: 16px;
   transition: fill 0.3s ease-in-out;
 }
 
-.news__swiper-button-prev svg, .news__swiper-button-next svg {
+.news__swiper-button-prev path, .news__swiper-button-next path {
   transition: fill 0.3s ease-in-out;
 }
 
 
-.news__swiper-button-prev:hover svg, .news__swiper-button-next:hover svg {
-fill: #D1A9F0;
+.news__swiper-button-prev:hover:not(:active) path, .news__swiper-button-next:hover:not(:active) path {
+  fill: #D1A9F0;
 }
 
 .news__swiper-button-prev:active svg, .news__swiper-button-next:active svg {

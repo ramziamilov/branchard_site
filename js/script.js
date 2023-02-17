@@ -39,6 +39,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 
+
 dropdownBtn.forEach(function(el) {
   el.addEventListener('click', function(e) {
     const path = e.currentTarget.dataset.path;
@@ -65,16 +66,18 @@ dropdownLink.forEach(function(el) {
   });
 });
 
-// document.getElementsByTagName('body')[0].addEventListener('click', () => {
-//   if(dropdownItem.forEach(function(el) {el.classList.contains('style--open')}))
-//     {
-//     dropdownItem.forEach(function(el) {el.classList.remove('style--open')})
-//     dropdownSvg.forEach(function(el) {el.classList.remove('header__styles_svg--open')});
-//     };
-// });
 
-
-
+document.addEventListener("click", function(e) {
+  let target = e.target;
+  if (!target.closest(".nav__list")) {
+    dropdownItem.forEach(el => {
+        el.classList.remove("style--open");
+    })
+     dropdownSvg.forEach(el => {
+        el.classList.remove("header__styles_svg--open");
+    });
+  }
+});
 
 const heroSwiper = new Swiper('.hero-swiper', {
   direction: 'horizontal',
