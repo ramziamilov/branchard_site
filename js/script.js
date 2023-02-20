@@ -1,15 +1,15 @@
 let dropdownItem = document.querySelectorAll(".styles");
-let dropdownBtn = document.querySelectorAll(".header__btn_styles");
-let dropdownSvg = document.querySelectorAll(".header__styles_svg");
+let dropdownBtn = document.querySelectorAll(".header__btn-styles");
+let dropdownSvg = document.querySelectorAll(".header__styles-svg");
 let dropdownLink = document.querySelectorAll(".styles__link");
-let tabsLink = document.querySelectorAll(".link_painters");
-let tabsItem = document.querySelectorAll(".catalog__content_tabs");
+let tabsLink = document.querySelectorAll(".link-painters");
+let tabsItem = document.querySelectorAll(".catalog__content-tabs");
 let catalogBtn = document.querySelectorAll(".catalog__btn");
-let burger = document.querySelector(".header__btn_burger");
+let burger = document.querySelector(".header__btn-burger");
 let menu = document.querySelector(".header__nav");
 let menuLink = document.querySelectorAll(".nav__link");
-let searchBtn = document.querySelector(".header__btn_search_top");
-let closeBtn = document.querySelector(".header__btn_search_close");
+let searchBtn = document.querySelector(".header__btn-search-top");
+let closeBtn = document.querySelector(".header__btn-search-close");
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('burger--active');
@@ -26,14 +26,14 @@ menuLink.forEach(function(el) {
 });
 
 searchBtn.addEventListener('click', () => {
-  searchBtn.classList.add("header__btn_search_top--disable");
-  closeBtn.classList.add("header__btn_search_close--active");
+  searchBtn.classList.add("header__btn-search-top--disable");
+  closeBtn.classList.add("header__btn-search-close--active");
   document.querySelector(".header__form-top").classList.add("header__form-top--active")
 });
 
 closeBtn.addEventListener("click", () => {
-  searchBtn.classList.remove("header__btn_search_top--disable");
-  closeBtn.classList.remove("header__btn_search_close--active");
+  searchBtn.classList.remove("header__btn-search-top--disable");
+  closeBtn.classList.remove("header__btn-search-close--active");
   document.querySelector(".header__form-top").classList.remove("header__form-top--active");
   document.querySelector(".search").value = "";
 });
@@ -47,22 +47,22 @@ dropdownBtn.forEach(function(el) {
       if(document.querySelector(`[data-target="${path}"]`).classList.contains('style--open'))
       {
         document.querySelector(`[data-target="${path}"]`).classList.remove('style--open');
-        document.querySelector(`[data-targetsvg="${path}"]`).classList.remove('header__styles_svg--open');
+        document.querySelector(`[data-targetsvg="${path}"]`).classList.remove('header__styles-svg--open');
       }
 
       else {
       dropdownItem.forEach(function(el) {el.classList.remove('style--open')});
       document.querySelector(`[data-target="${path}"]`).classList.add('style--open')
 
-      dropdownSvg.forEach(function(el) {el.classList.remove('header__styles_svg--open')});
-      document.querySelector(`[data-targetsvg="${path}"]`).classList.add('header__styles_svg--open');}
+      dropdownSvg.forEach(function(el) {el.classList.remove('header__styles-svg--open')});
+      document.querySelector(`[data-targetsvg="${path}"]`).classList.add('header__styles-svg--open');}
   });
 });
 
 dropdownLink.forEach(function(el) {
   el.addEventListener('click', () => {
     dropdownItem.forEach(function(el) {el.classList.remove('style--open')});
-    dropdownSvg.forEach(function(el) {el.classList.remove('header__styles_svg--open')});
+    dropdownSvg.forEach(function(el) {el.classList.remove('header__styles-svg--open')});
   });
 });
 
@@ -74,7 +74,7 @@ document.addEventListener("click", function(e) {
         el.classList.remove("style--open");
     })
      dropdownSvg.forEach(el => {
-        el.classList.remove("header__styles_svg--open");
+        el.classList.remove("header__styles-svg--open");
     });
   }
 });
@@ -141,10 +141,10 @@ const heroSwiper = new Swiper('.hero-swiper', {
 
 
  new Accordion ('.catalog__list', {
-  elementClass: 'catalog__item_top',
+  elementClass: 'catalog__item-top',
   triggerClass: 'catalog__btn',
-  panelClass: 'catalog__item_bot',
-  activeClass: 'catalog__item_top--active'
+  panelClass: 'catalog__item-bot',
+  activeClass: 'catalog__item-top--active'
 });
 
 
@@ -155,14 +155,14 @@ catalogBtn.forEach(function(el) {
 
     if(path==="no_info")
       {
-        tabsItem.forEach(function(el){el.classList.remove('catalog__content_tabs--active')});
-        document.querySelector(`[data-target="no_info"]`).classList.add('catalog__content_tabs--active');
+        tabsItem.forEach(function(el){el.classList.remove('catalog__content-tabs--active')});
+        document.querySelector(`[data-target="no_info"]`).classList.add('catalog__content-tabs--active');
       }
 
     else
       {
-        tabsItem.forEach(function(el){el.classList.remove('catalog__content_tabs--active')});
-        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content_tabs--active');
+        tabsItem.forEach(function(el){el.classList.remove('catalog__content-tabs--active')});
+        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content-tabs--active');
       }
   });
 
@@ -173,11 +173,11 @@ tabsLink.forEach(function(el) {
   el.addEventListener('click', function(e) {
     const path = e.currentTarget.dataset.path;
 
-    tabsLink.forEach(function(btn){btn.classList.remove('link_painters--active')});
-    e.currentTarget.classList.add('link_painters--active');
+    tabsLink.forEach(function(btn){btn.classList.remove('link-painters--active')});
+    e.currentTarget.classList.add('link-painters--active');
 
-    tabsItem.forEach(function(el){el.classList.remove('catalog__content_tabs--active')});
-    document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content_tabs--active');
+    tabsItem.forEach(function(el){el.classList.remove('catalog__content-tabs--active')});
+    document.querySelector(`[data-target="${path}"]`).classList.add('catalog__content-tabs--active');
 
   });
 });
@@ -330,7 +330,7 @@ const newsSwiper = new Swiper('.news__swiper', {
 
 
 
- const validation = new JustValidate('#contacts__form_input',
+ const validation = new JustValidate('#contacts__form-input',
 
  {
   errorLabelCssClass: 'is-label-invalid',
